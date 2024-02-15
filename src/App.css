@@ -4,6 +4,7 @@ ul {
 
 .main-container {
 	padding: 2rem;
+	width: 265%;
 	height: 100vh;
 	background-color: #1e1e1e;
 	color: #fff;

@@ -1,6 +1,5 @@
 // Zustand Imports
 import create from 'zustand';
-
 import { devtools, persist } from 'zustand/middleware';
 
 // store global state
@@ -39,11 +38,10 @@ const courseStore = (set) => ({
 			courses: state.courses.map((c) =>
 				// For each course find the 'c.id' that has the value of 'courseId'
 				c.id === courseId
-					? // Spread each 'c' element, and update the name of the course that contains the courseId
-					  { ...c, name: 'Updated' }
+            ? // Spread each 'c' element, and update the name of the course that contains the courseId
+          { ...c, name: 'Updated' }
 					: // return 'c' or original courses state
-					  c
-			),
+             c ),
 		}));
 	},
 
@@ -65,10 +63,9 @@ const courseStore = (set) => ({
 				// Find the 'c.id' that has the value of 'courseId'
 				c.id === courseId
 					? // change the value of 'complete; to the opposite state
-					  { ...c, completed: !c.completed }
+            { ...c, completed: !c.completed }
 					: // return 'c' or original courses state
-					  c
-			),
+            c ),
 		}));
 	},
 });
